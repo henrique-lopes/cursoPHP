@@ -24,7 +24,7 @@ if(isset($_POST['btn-entrar'])):
          $resultado = mysqli_query($connect, $sql);
             if(mysqli_num_rows($resultado) == 1 ):
                 $dados = mysqli_fetch_array($resultado);
-                mysqli_close($connect);
+                //mysqli_close($connect);
                 $_SESSION['logado'] = true;
                 $_SESSION['id_usuario'] = $dados['id'];
                 header('Location: home.php');
